@@ -28,7 +28,7 @@ public class Part01Flux {
 
 	// TODO Create a Flux from a List that contains 2 values "foo" and "bar"
 	Flux<String> fooBarFluxFromList() {
-		return null;
+		return Flux.fromArray(new String[]{"foo", "bar"});
 	}
 
 //========================================================================================
