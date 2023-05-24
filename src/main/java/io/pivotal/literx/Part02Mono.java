@@ -12,7 +12,6 @@ public class Part02Mono {
 
 //========================================================================================
 
-	// TODO Return an empty Mono
 	Mono<String> emptyMono() {
 		return Mono.empty();
 	}
@@ -26,7 +25,6 @@ public class Part02Mono {
 
 //========================================================================================
 
-	// TODO Return a Mono that contains a "foo" value
 	Mono<String> fooMono() {
 		return Mono.just("foo");
 	}

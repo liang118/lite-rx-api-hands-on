@@ -12,28 +12,24 @@ public class Part01Flux {
 
 //========================================================================================
 
-	// TODO Return an empty Flux
 	Flux<String> emptyFlux() {
 		return Flux.empty();
 	}
 
 //========================================================================================
 
-	// TODO Return a Flux that contains 2 values "foo" and "bar" without using an array or a collection
 	Flux<String> fooBarFluxFromValues() {
 		return Flux.just("foo", "bar");
 	}
 
 //========================================================================================
 
-	// TODO Create a Flux from a List that contains 2 values "foo" and "bar"
 	Flux<String> fooBarFluxFromList() {
 		return null;
 	}
 
 //========================================================================================
 
-	// TODO Create a Flux that emits an IllegalStateException
 	Flux<String> errorFlux() {
 		return null;
 	}
