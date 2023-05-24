@@ -18,9 +18,8 @@ public class Part02Mono {
 
 //========================================================================================
 
-	// TODO Return a Mono that never emits any signal
 	Mono<String> monoWithNoSignal() {
-		return null;
+		return Mono.never();
 	}
 
 //========================================================================================
