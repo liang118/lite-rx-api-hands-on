@@ -42,6 +42,7 @@ public class Part01Flux {
 
 		// TODO Create a Flux that emits increasing values from 0 to 9 each 100ms
 	Flux<Long> counter() {
+		//hard
 		return null;
 	}
 
