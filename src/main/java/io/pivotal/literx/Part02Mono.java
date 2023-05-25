@@ -21,7 +21,7 @@ public class Part02Mono {
 
 	// TODO Return a Mono that never emits any signal
 	Mono<String> monoWithNoSignal() {
-		return null;
+		return Mono.never();
 	}
 
 //========================================================================================
@@ -35,7 +35,7 @@ public class Part02Mono {
 
 	// TODO Create a Mono that emits an IllegalStateException
 	Mono<String> errorMono() {
-		return null;
+		return Mono.error(new IllegalStateException("a Mono that emits an IllegalStateException"));
 	}
 
 }

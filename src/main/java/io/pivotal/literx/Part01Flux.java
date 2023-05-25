@@ -2,6 +2,9 @@ package io.pivotal.literx;
 
 import reactor.core.publisher.Flux;
 
+import java.time.Duration;
+import java.util.Arrays;
+
 /**
  * Learn how to create Flux instances.
  *
@@ -28,22 +31,23 @@ public class Part01Flux {
 
 	// TODO Create a Flux from a List that contains 2 values "foo" and "bar"
 	Flux<String> fooBarFluxFromList() {
-		return Flux.fromArray(new String[]{"foo", "bar"});
+		return Flux.fromIterable(Arrays.asList("foo", "bar"));
 	}
 
 //========================================================================================
 
 	// TODO Create a Flux that emits an IllegalStateException
 	Flux<String> errorFlux() {
-		return Flux.error(new Throwable(new IllegalStateException()));
+		return Flux.error(new IllegalStateException("a Flux that emits an IllegalStateException"));
 	}
 
 //========================================================================================
 
-		// TODO Create a Flux that emits increasing values from 0 to 9 each 100ms
+	// TODO Create a Flux that emits increasing values from 0 to 9 each 100ms
 	Flux<Long> counter() {
-		//hard
-		return null;
+		// 这里应该还有其他实现方式，比如range加map
+		return Flux.range(0, 10).map(Long::valueOf).delayElements(Duration.ofMillis(100));
+//		return Flux.interval(Duration.ofMillis(100)).take(10);
 	}
 
 }
