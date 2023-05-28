@@ -10,19 +10,18 @@ import reactor.core.publisher.Mono;
  * @author Sebastien Deleuze
  */
 public class Part10ReactiveToBlocking {
-
-//========================================================================================
+	//========================================================================================
 
 	// TODO Return the user contained in that Mono
 	User monoToValue(Mono<User> mono) {
-		return null;
+		return mono.block(); // TO BE REMOVED
 	}
 
 //========================================================================================
 
 	// TODO Return the users contained in that Flux
 	Iterable<User> fluxToValues(Flux<User> flux) {
-		return null;
+		return flux.toIterable(); // TO BE REMOVED
 	}
 
 }
